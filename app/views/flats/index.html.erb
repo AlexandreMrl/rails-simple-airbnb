@@ -1,8 +1,12 @@
-<div class="main-container">
+<div class="container">
   <h1>Flats</h1>
-  <ul>
+  <ul class="flex grid grid-cols-3 justify-around gap-6">
     <% @flats.each do |flat| %>
-      <li><%= flat.name %></li>
+      <li class="box-border auto p-4 border-4">
+        <div><strong><%= flat.name %></strong></div>
+        <div>description : <%= flat.description %></div>
+        <div>Price per night <%= flat.price_per_night %>€ - guest<%= flat.number_of_guest %></div>
+      </li>
     <% end %>
   </ul>
 </div>
